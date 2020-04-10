@@ -1,0 +1,30 @@
+{
+  "name": "visual",
+  "scripts": {
+    "lint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "@babel/runtime-corejs2": "^7.5.5",
+    "@types/core-js": "^2.5.3",
+    "@types/d3": "^4.13.2",
+    "@types/lodash": "^4.14.149",
+    "core-js": "3.2.1",
+    "d3": "^4.13.0",
+    "lodash": "^4.17.15",
+    "powerbi-visuals-api": "^2.6.2",
+    "powerbi-visuals-tools": "3.1.12",
+    "powerbi-visuals-utils-chartutils": "^2.4.1",
+    "powerbi-visuals-utils-dataviewutils": "^2.2.1",
+    "powerbi-visuals-utils-formattingutils": "^4.4.2",
+    "powerbi-visuals-utils-svgutils": "^2.2.1",
+    "powerbi-visuals-utils-tooltiputils": "^2.3.1"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "ts-loader": "6.0.4",
+    "tslint": "^6.1.0",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "3.5.3"
+  }
+}

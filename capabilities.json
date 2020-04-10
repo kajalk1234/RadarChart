@@ -1,0 +1,346 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Category",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Values",
+            "name": "measure",
+            "kind": "Measure",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                }
+            ]
+        }
+    ],
+    "supportsLandingPage": true,
+    "objects": {
+        "plotOptions": {
+            "displayName": "Radar plot",
+            "description": "Display radar plot options",
+            "properties": {
+                "interpolation": {
+                    "displayName": "Interpolation",
+                    "description": "Configure the curve interpolation method",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "curveLinearClosed",
+                                "displayName": "Linear"
+                            },
+                            {
+                                "value": "curveCardinalClosed",
+                                "displayName": "Cardinal closed"
+                            },
+                            {
+                                "value": "curveBundle",
+                                "displayName": "Bundle"
+                            },
+                            {
+                                "value": "curveBasisClosed",
+                                "displayName": "Basis closed"
+                            },
+                            {
+                                "value": "curveNatural",
+                                "displayName": "Natural"
+                            }
+                        ]
+                    }
+                },
+                "strokeWidth": {
+                    "displayName": "Stroke width",
+                    "description": "Value must be less than or equal to 5",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "transparency": {
+                    "displayName": "Transparency",
+                    "description": "Set transparency for the plot color",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "circleRadius": {
+                    "displayName": "Data point radius",
+                    "description": "Value must be less than or equal to 5",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "showDataPoints": {
+                    "displayName": "Data points",
+                    "description": "Display data points on the plot",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showValuesDataPoints": {
+                    "displayName": "Data values",
+                    "description": "Display data values on the plot",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showAllValuesDataPoints": {
+                    "displayName": "Display all",
+                    "description": "Display all data values on the plot",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "dataPointColor": {
+                    "displayName": "Data point color",
+                    "description": "Change the color of the data points",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "plotValueColor": {
+                    "displayName": "Data value color",
+                    "description": "Change the color of the data values",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "plotColors": {
+            "displayName": "Plot colors",
+            "description": "Display plot colors options",
+            "properties": {
+                "plotColor": {
+                    "displayName": "Category Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "labelOptions":{
+            "displayName": "Label",
+            "description": "Display label options",
+            "properties":{
+                "fontSize": {
+                    "displayName": "Font size",
+                    "description": "Font size for the labels",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "fontFamily": {
+                    "displayName": "Font family",
+                    "description": "Change the font family of labels",
+                    "type": {
+                        "formatting": {
+                            "fontFamily": true
+                        }
+                    }
+                },
+                "fontColor": {
+                    "displayName": "Color",
+                    "description": "Change the color of labels",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "axisOptions": {
+            "displayName": "Axis",
+            "description": "Display axis options",
+            "properties": {
+                "show": {
+                    "displayName": "Show",
+                    "displayNameKey": "",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "axisColor": {
+                    "displayName": "Color",
+                    "description": "Change the color of axis",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "strokeWidth": {
+                    "displayName": "Stroke width",
+                    "description": "Value must be less than 5",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "positionAxisLabel": {
+                    "displayName": "Label position",
+                    "description": "Change the position of labels",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "top",
+                                "displayName": "Top"
+                            },
+                            {
+                                "value": "bottom",
+                                "displayName": "Bottom"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "legendOptions": {
+            "displayName": "Legend",
+            "description": "Display legend options",
+            "properties": {
+                "show": {
+                    "displayName": "Show",
+                    "displayNameKey": "",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "legendPosition": {
+                    "displayName": "Position",
+                    "description": "Change the position of legend",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "Top",
+                                "displayName": "Top"
+                            },
+                            {
+                                "value": "Bottom",
+                                "displayName": "Bottom"
+                            },
+                            {
+                                "value": "Left",
+                                "displayName": "Left"
+                            },
+                            {
+                                "value": "Right",
+                                "displayName": "Right"
+                            },
+                            {
+                                "value": "LeftCenter",
+                                "displayName": "Left center"
+                            },
+                            {
+                                "value": "RightCenter",
+                                "displayName": "Right centre"
+                            },
+                            {
+                                "value": "TopCenter",
+                                "displayName": "Top center"
+                            },
+                            {
+                                "value": "BottomCenter",
+                                "displayName": "Bottom center"
+                            }
+                        ]
+                    }
+                },
+                "legendTitle": {
+                    "displayName": "Title",
+                    "description": "Enter the title for legend",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "description": "Change the font size of legend",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "legendColor": {
+                    "displayName": "Font color",
+                    "description": "Change the color of legend",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "drilldown": {
+        "roles": [
+            "category"
+        ]
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "category": {
+                        "min": 0,
+                        "max": 1
+                    }
+                }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {
+                            "count": 20000
+                        }
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "tooltips": {
+        "supportedTypes": {
+            "default": true,
+            "canvas": true
+        },
+        "roles": []
+    },
+    "sorting": {
+        "default": {   }
+    }
+}
