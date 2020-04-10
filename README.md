@@ -1,2 +1,0 @@
-# RadarChart
-Repository for RadarChart
