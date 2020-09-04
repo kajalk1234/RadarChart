@@ -284,7 +284,7 @@ export class Visual implements IVisual {
         d3.selectAll(".axis").each((d, i, nodes) => {
             let measureFormatName = d;
             d3.select(nodes[i]).selectAll("g .tick").each((data, j, textNodes) => {
-                let scaleValue = Number.parseInt(d3.select(textNodes[j]).select("text").text());
+                let scaleValue = Number(d3.select(textNodes[j]).select("text").text());
                 //applying formatter for each value from this.measureFormat[] array using '.axis' classed elements index
                 let valueFormat;
                 this.measureFormat.forEach((formatData) => {
@@ -305,7 +305,7 @@ export class Visual implements IVisual {
                             valueFormat = formatData.format;
                         }
                     })
-                    let scaleValue = Number.parseInt(d3.select(textNodes[j]).text());
+                    let scaleValue = Number(d3.select(textNodes[j]).text());
                     let formattedScaleValue = valueFormat.format(scaleValue).toString();
                     d3.select(textNodes[j]).text(formattedScaleValue);
                 })
