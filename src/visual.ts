@@ -171,7 +171,7 @@ export class Visual implements IVisual {
             let values = options.dataViews[0].categorical.values;
             values.forEach((d, i) => {
                 let format = valueFormatter.create({
-                    format: values[i].source.format
+                    format: values[i].source.format ? values[i].source.format : valueFormatter.DefaultNumericFormat
                 });
                 let measureFormat = { "name": d.source.displayName, "format": format }
                 this.measureFormat.push(measureFormat);
@@ -241,7 +241,7 @@ export class Visual implements IVisual {
             })
             for (let iteratorData = 0; iteratorData < data[constants.dataIndex][constants.lengthIndex]; iteratorData++) {
                 let dataIteratorData = data[constants.dataIndex][iteratorData];
-                let iteratorDataValue = dataIteratorData.value % constants.one === 0 ? dataIteratorData.value : dataIteratorData.value.toFixed(2);
+                let iteratorDataValue = dataIteratorData.value;
                 let valueFormat;
                 this.measureFormat.forEach((formatData) => {
                     if (formatData.name == dataIteratorData.axis) {
